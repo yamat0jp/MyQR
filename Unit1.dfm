@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 465
   Top = 362
   AlphaBlend = True
-  AlphaBlendValue = 100
+  AlphaBlendValue = 50
   BorderStyle = bsNone
   Caption = 'Form1'
   ClientHeight = 150
@@ -15,9 +15,9 @@ object Form1: TForm1
   Font.Style = []
   FormStyle = fsStayOnTop
   Position = poDesigned
-  OnClick = FormClick
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
   OnMouseMove = FormMouseMove
   OnPaint = FormPaint
   TextHeight = 15
