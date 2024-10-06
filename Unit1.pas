@@ -58,7 +58,10 @@ procedure TForm1.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   if Button = mbLeft then
-    WindowState := wsMiniMized
+  begin
+    WindowState := wsMiniMized;
+    text := '';
+  end
   else if Width < 600 then
   begin
     Width := Width + 150;
@@ -108,9 +111,7 @@ begin
         text := res.text;
         OpenURL(res.text);
         FreeAndNil(res);
-      end
-      else
-        scanBitmap.FreeImage;
+      end;
     end);
 end;
 
