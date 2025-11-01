@@ -44,7 +44,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   ScanManager := TScanManager.Create(TBarcodeFormat.Auto, nil);
   scanBitmap := TBitmap.Create(Width, Height);
-  G_DC := GetWindowDC(0);
+  G_DC := GetDC(0);
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -75,6 +75,8 @@ begin
     Height := 150;
     FormPaint(Sender);
   end;
+  scanBitmap.Width := Width;
+  scanBitmap.Height := Height;
 end;
 
 procedure TForm1.FormMouseMove(Sender: TObject; Shift: TShiftState;
